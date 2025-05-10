@@ -1,0 +1,24 @@
+name: Inference
+
+on:
+  schedule:
+    - cron: "30 1 * * *"  # Runs daily at 1:30 AM UTC (after FE)
+  workflow_dispatch:
+
+jobs:
+  inference:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run inference
+        run: python scripts/inference.py

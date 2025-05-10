@@ -21,4 +21,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run feature engineering
-        run: python scripts/feature_engineering.py
+        run: python pipelines/feature_engineering.py

@@ -6,8 +6,8 @@ import hopsworks
 # -----------------------------
 import os
 project = hopsworks.login(
-    project=os.getenv("HOPSWORKS_PROJECT_NAME"),
-    api_key_value=os.getenv("HOPSWORKS_API_KEY")
+    project=os.getenv("CDA500FINAL"),
+    api_key_value=os.getenv("HB0zAW5eEzl4iuNq.KJX5bZAdAnGaRJrIFVFVB30exr8wMMql5TZUuNMVeMUbcOVqRXg0fW3OWz2aRzOi")
 )
 
 fs = project.get_feature_store()

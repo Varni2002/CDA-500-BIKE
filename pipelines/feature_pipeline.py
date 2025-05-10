@@ -4,7 +4,11 @@ import hopsworks
 # -----------------------------
 # Step 1: Connect to Hopsworks
 # -----------------------------
-project = hopsworks.login(project="CDA500FINAL")
+import os
+project = hopsworks.login(
+    project=os.environ["HOPSWORKS_PROJECT_NAME"],
+    api_key_value=os.environ["HOPSWORKS_API_KEY"]
+)
 fs = project.get_feature_store()
 
 # -----------------------------

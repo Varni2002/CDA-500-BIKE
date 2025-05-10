@@ -22,3 +22,7 @@ jobs:
 
       - name: Run feature engineering
         run: python pipelines/feature_pipeline.py
+        env:
+             HOPSWORKS_PROJECT_NAME: ${{ secrets.HOPSWORKS_PROJECT_NAME }}
+             HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+

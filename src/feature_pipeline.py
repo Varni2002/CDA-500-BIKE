@@ -4,7 +4,10 @@ import hopsworks
 # -----------------------------
 # Step 1: Connect to Hopsworks
 # -----------------------------
-project = hopsworks.login(project="CDA500FINAL")
+project = hopsworks.login(
+    project=os.environ["CDA500FINAL"],
+    api_key_value=os.environ["HB0zAW5eEzl4iuNq.KJX5bZAdAnGaRJrIFVFVB30exr8wMMql5TZUuNMVeMUbcOVqRXg0fW3OWz2aRzOi"]
+)
 fs = project.get_feature_store()
 
 # -----------------------------
